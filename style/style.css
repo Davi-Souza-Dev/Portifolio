@@ -11,7 +11,7 @@
 .topnav {
   overflow: hidden;
   background-color: var(--base2);
-  margin-top: -32px;
+  margin-top: -31px;
   max-width: 250px;
 }
 
@@ -173,7 +173,7 @@ body{
 header{
     margin-top: -10px;
     background-color: black;
-    height: 100px;
+    height: 80px;
     min-width: 300px;
 }
 
@@ -196,24 +196,35 @@ main{
 }
 
 main section{
-    background-color: var(--base);
+  height: 800px;
+}
 
+main section h1{
+    text-align: center;
+    color: var(--base3);
+    font-size: 50px;
 }
 
 main section img{
     max-width: 250px;
-    height: 250px;
     background-color: var(--base2);
-    padding: 20px 0px ;
-    margin: 50px 0px;
+    padding: 20px 0px;
+    margin: 10px 0px 0px 0px;
     border-radius: 10px;
 }
+
 main section article{
     display: inline-block;
     margin: auto;
 }
-
+/*
+main section article  a{
+  text-decoration: none;
+}
+*/
 main section article  a > img{
+    border-style: solid;
+    border-color: var(--base2);
     margin: 10px 20px;
     border-radius: 100px;
     width: 100px;
@@ -222,10 +233,39 @@ main section article  a > img{
     padding: 10px;
 }
 
+main section article a > .social{
+  margin: 10px 20px;
+  border-radius: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--base3);
+  padding: 10px;
+  display: inline-block;
+}
+
 main section article a > img:hover{
-    border-style: solid;
-    border-color: var(--base2);
-    background-color: var(--base);
+    border-style: dashed;
+    background-color: var(--base3);
+    margin-top: -10px;
+    border-color: yellow;
+}
+
+main section article a > #instaicon:hover{
+  border-style: solid;
+  border-color: var(--base2);
+  background-image: linear-gradient(to right, pink, yellow);
+}
+
+main section article a > #githubicon:hover{
+  border-style: solid;
+  border-color: var(--base2);
+  background-color: darkgray;
+}
+
+main section article a > #whatsappicon:hover{
+  border-style: solid;
+  border-color: var(--base2);
+  background-color: lightgreen;
 }
 
 .main2{
@@ -262,8 +302,8 @@ main section article a > img:hover{
 }
 
 footer{
-    margin-top: 10px;
-    height: 60px;
+    margin-top: 220px;
+    height: 45px;
     background-color: var(--base2);
 }
 
