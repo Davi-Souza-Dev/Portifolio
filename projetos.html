@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Davi Souza  - Developer</h1>
+    </header>
+    <!--Menu responsivo - fim-->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Início</a>
+        <a href="sobremim.html">Sobre mim</a>
+        <a href="projetos.html" class="active">Projetos</a>
+        <a href="contato.html">Contato</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+      <!--Menu responsivo - fim-->
+    <main class="main2">
+        <h1>1° Projeto</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe enim molestias deleniti repudiandae voluptate officia harum nostrum eligendi maxime dicta aliquid impedit ducimus, blanditiis error explicabo labore eveniet qui veritatis.
+        </p>
+        <!--Slide show-->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="imagens/Projeto-Index.png" style="width:100%">
+              <div class="text">Página inicial do projeto</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="imagens/projeto-historia.png" style="width:100%">
+              <div class="text">Página de historia do Kirby</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="imagens/projeto-habilidades2.png" style="width:100%">
+                <div class="text">Página de habilidades</div>
+              </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 5</div>
+              <img src="imagens/projeto-habilidades.png" style="width:100%">
+              <div class="text">Página de habilidades</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="imagens/projeto-personagens.png" style="width:100%">
+                <div class="text">Página final</div>
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+        <!--Fim slideshow-->
+         <h1>2° Projeto</h1>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet mollitia consequatur veniam tempora suscipit delectus, eaque dolores, natus fugit molestias nihil. Eligendi recusandae at aut aperiam error dolorum tempore commodi?
+         </p>
+        <h1>3° Projeto</h1>
+       <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere reprehenderit eveniet beatae voluptatum, quia ratione perferendis omnis odio dolorem accusamus, enim nobis ab vero, illo modi ipsum. Sequi, sed labore.
+        </p>
+    </main>
+    <footer>
+        <p>
+            Site criado por davi de souza - 2023
+        </p>
+    </footer>
+</body>
+</html>
