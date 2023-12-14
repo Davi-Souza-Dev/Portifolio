@@ -372,15 +372,17 @@ article.carrosel > h1{
 
 article.beneficios{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap:wrap;
 }
 
 article.beneficios > div.blocoText{
+  align-self: center;
   padding-left: 10px;
   width: 100%;
-  overflow: hidden;
+  text-align: center;
 }
 
 article.beneficios > div.blocoText > h1#titulo{
@@ -388,7 +390,7 @@ article.beneficios > div.blocoText > h1#titulo{
 }
 article.beneficios >  div.blocoText > h1#titulo > a{
   text-align: left;
-  align-self: flex-start;
+  align-self: center;
   width: 100%;
   color: var(--cor1);
   font-size: 26px;
@@ -399,6 +401,7 @@ article.beneficios >  div.blocoText > h1#titulo > a{
 }
 
 article.beneficios > div#foto2{
+  align-self: center;
   width: 150px;
   height: 150px;
   border-radius: 20px;
@@ -410,7 +413,7 @@ article.beneficios > div#foto2{
 }
 
 article.beneficios > p{
-  align-self: flex-end;
+  align-self: center;
   text-align: justify;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
