@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/*Tablets*/
+:root{
+    --cor1: black;
+    --cor2: white;
+    --cor3: #FFF500;
+    --cor4: #9a950d;
+  }
+
+@media screen and (min-width: 480px ) {
+    header{
+        height: 60px;
+      }
+
+      .topnav {
+        height: 60px;
+      }
+    
+      article.inicio{
+        height: 370px;
+      }
+
+      article.inicio{
+        height: 230px;
+      }
+
+      article > h1#name{
+        font-size: 40px;
+      }
+
+      article  > h1 > a#inicioText{
+        font-size: 20px; 
+        text-align: center;
+      }
+
+      article.sobremim > h1{
+        font-size: 40px;
+    }
+
+      
+    article.sobremim > p{
+        width: 200px;
+        height: 290px;
+        font-size: 20px;
+    }
+
+    article.sobremim > div.foto{
+        width: 200px;
+        height: 290px;
+      }
+
+      article.carrosel > h1{
+        font-size: 40px;
+      }
+
+      .slides > div {
+        width: 400px;
+        height: 400px;
+      }
+
+      
+      .slider {
+        width: 400px;
+      }
+
+      .face h1{
+        font-size: 25px;
+      }
+
+      .face p{
+        font-size: 20px;
+      }
+
+      .servicos > h1{
+        font-size: 40px;
+      }
+
+      .servicos > .sv{
+        width: 400px;
+        height: 200px;
+      }
+
+      .sv > p{
+        font-size: 20px;
+      }
+
+      article.beneficios >  div.blocoText > h1#titulo > a{
+       font-size: 40px;
+      }
+
+      article.beneficios > div#foto2{
+        width: 200px;
+        height: 290px;
+      }
+
+      article.beneficios > p{
+        font-size: 20px;
+        width: 200px;
+      }
+
+      article.beneficios > h1{
+        padding-top: 30px;
+        width: 100%;
+        font-size: 30px;
+        padding-left: 10px;
+      }
+
+      article.beneficio{
+        height: 200px;
+      }
+
+      article.beneficio > h1 { 
+        font-size: 20px;
+        align-self: center;
+    }
+      
+      article.beneficio > p{
+        font-size: 20px;
+        align-self: center;
+      }
+
+      article#bn2{
+        background-color: var(--cor2);
+      }
+      
+      article#bn2 > h1{
+        text-align: center;
+        color: var(--cor1);
+      }
+      
+      article#bn2 > p{
+        text-align: center;
+        color: var(--cor1);
+      }
+
+      footer{
+        background-color: var(--cor1);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      footer > article.contatos{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px 70px;
+      }
+
+}

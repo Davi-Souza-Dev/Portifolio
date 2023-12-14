@@ -53,11 +53,10 @@ header{
 }
 
 .topnav {
-
   overflow: hidden;
   background-color: var(--cor1);
   position: relative;
-  border-radius: 0px 0px 10px 10px;
+  border-color: var(--cor3);
 }
 
 .topnav #myLinks {
@@ -152,7 +151,7 @@ article.sobremim{
 article.sobremim > h1{
   align-self: center;
   text-align: center;
-  width: 70%;
+  width: 100%;
   padding-top: -40px;
   color: var(--cor1);
   font-size: 26px;
@@ -193,7 +192,12 @@ article.carrosel{
   position: relative;
   left: 50%;
   transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 article.carrosel > h1{
   color: var(--cor1);
   font-size: 26px;
@@ -388,6 +392,7 @@ article.beneficios > div.blocoText{
 article.beneficios > div.blocoText > h1#titulo{
   padding-top: 40px;
 }
+
 article.beneficios >  div.blocoText > h1#titulo > a{
   text-align: left;
   align-self: center;
@@ -446,7 +451,7 @@ article.beneficio{
 }
 
 article.beneficio > h1 { 
-  text-align: left;
+  text-align: center;
   width: 100%;
   color: var(--cor2 );
   font-size: 16px;
