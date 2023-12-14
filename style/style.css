@@ -53,6 +53,7 @@ header{
 }
 
 .topnav {
+
   overflow: hidden;
   background-color: var(--cor1);
   position: relative;
