@@ -142,9 +142,104 @@
               <p>Consigo criar panfletos, cartões de visita e logomarcas para diferentes comércios e serviços. Assim consigo deixá-los muito mais profissionais.</p>
             </div>
         </article>
+        <article class="beneficios">
+          <div class="blocoText">
+            <h1 id="titulo">
+              <a href="" id="titulo" class="typewrite" data-period="2000" data-type='[ "SEM MAIS PLANFLETOS","DE UM UPGRADE EM SEU SERVIÇO"]'>
+                <span class="wrap"></span>
+              </a>
+            </h1>
+            <script>
+              var TxtType = function(el, toRotate, period) {
+              this.toRotate = toRotate;
+              this.el = el;
+              this.loopNum = 0;
+              this.period = parseInt(period, 10) || 2000;
+              this.txt = '';
+              this.tick();
+              this.isDeleting = false;
+                  };
+            TxtType.prototype.tick = function() {
+              var i = this.loopNum % this.toRotate.length;
+              var fullTxt = this.toRotate[i];
+              if (this.isDeleting) {
+              this.txt = fullTxt.substring(0, this.txt.length - 1);
+              } else {
+              this.txt = fullTxt.substring(0, this.txt.length + 1);
+              }
+              this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+              var that = this;
+              var delta = 150 - Math.random() * 150;
+              if (this.isDeleting) { delta /= 2; }
+              if (!this.isDeleting && this.txt === fullTxt) {
+              delta = this.period;
+              this.isDeleting = true;
+              } else if (this.isDeleting && this.txt === '') {
+              this.isDeleting = false;
+              this.loopNum++;
+              delta = 500;
+              }
+              setTimeout(function() {
+              that.tick();
+              }, delta);
+            };
+            window.onload = function() {
+              var elements = document.getElementsByClassName('typewrite');
+              for (var i=0; i<elements.length; i++) {
+                  var toRotate = elements[i].getAttribute('data-type');
+                  var period = elements[i].getAttribute('data-period');
+                  if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                  }
+              }
+              // INJECT CSS
+              var css = document.createElement("style");
+              css.type = "text/css";
+              css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+              document.body.appendChild(css);
+            };
+            </script>
+          </div>
+          <br/>
+            <div id="foto2"></div>
+            <p>Com um site você consegue adaptar-se ao mundo digital, e consegue fazer um marketing de muito maior alcance além de conseguir exclaracer duvidas de seus clientes sem nem mesmo falar com eles!</p>
+          <h1>Benefícios</h1>
+        </article>
+        <article class="beneficio" id="bn1">
+          <h1>MAIOR ALCANCE DE CLIENTES</h1>
+          <p>Atraia seus clientes sem nem mesmo gastar dinheiro com panfletos ou tendo que chamar a atenção na rua, deixe que os anúncio e seu site façam isso por você. </p>
+        </article>
+        <article class="beneficio" id="bn2">
+          <h1>Maior visibilidade</h1>
+          <p>Já pensou ser visto todos os dias? e realmente chamar a atençao de seu cliente? Isso é possível quando se tem um site para ser mostrado.</p>
+        </article>
+        <article class="beneficio" id="bn3">
+          <h1>Velociade e melhorias</h1>
+          <p>
+            Com um site você consegue adaptá-lo rapidamente e realizar mudanças rápidas, além de conseguir ter meu suporte durante o dia inteiro.
+          </p>
+
+        </article>
   </section>
   <footer>
-
+      <h1>ENTRE EM CONTATO</h1>
+      <article class="contatos">
+        <div id="whats">
+          <a href="https://api.whatsapp.com/send?phone=5511949335503&text=Eu%20sou%20um%20desenvolvedor%20Front-End,%20lembre-se:%20%22Seu%20site,%20Sua%20apar%C3%AAncia%22;" target="_blank"><img src="imagens/whatsaapicon.png" alt="icon"></a>
+        </div>
+        <div id="insta">
+          <a href="https://www.instagram.com/davi.dev97/" target="_blank"><img src="imagens/instagramicon.png" alt="icon"></a>
+        </div>
+        <div id="email">
+          <a href="mailto:daviekalebe2200@gmail.com" target="_blank"><img src="imagens/emailicon.png" alt="icon"></a>
+        </div>
+        <div id="github">
+          <a href="https://github.com/Davi-Souza-Dev" target="_blank"><img src="imagens/githubicon.png" alt="icon"></a>
+        </div>
+      </article>
+      <p>
+        site criado por davi de souza - 2023
+      </p>
   </footer>
 </div>
 </body>
