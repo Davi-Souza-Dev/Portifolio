@@ -21,7 +21,7 @@ html , body{
   width: 100%;
 }
 
-section.inicio{
+section#inicio{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +50,9 @@ section > h1{
   font: var(--fontTitulo);
   font-size: 27px;
   font-weight: bolder;
+  align-self: center;
+  width: 100%;
+  text-align: center;
 }
 
 section > h1 > a{
