@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Informações</title>
+</head>
+<body>
+    <header>
+        <nav>  
+            <div class="op">
+                <a href="#servico"><img src="imagens/menu/servico.png" alt="servico"></a>
+            </div>
+            <div class="op">
+                <a href="#processo"><img src="imagens/menu/projetos.png" alt="servico"></a>
+            </div>
+            <div class="op">
+                <a href="#contato"><img src="imagens/menu/email.png" alt="servico"></a>
+            </div>
+        </nav>
+        <h1>A solução para..</h1>
+        <!--EFEITO TYPERWRITER -->
+
+      <h2>
+        <a class="typewrite" data-period="2000" data-type='[ "Seu negócio", "Sua empresa", "Seu serviço", "Seu faturamento", "Sua imagem" ]'>
+          <span class="wrap"></span>
+        </a>
+      </h2>
+      <script>
+        var TxtType = function(el, toRotate, period) {
+          this.toRotate = toRotate;
+          this.el = el;
+          this.loopNum = 0;
+          this.period = parseInt(period, 10) || 2000;
+          this.txt = '';
+          this.tick();
+          this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+            }
+
+            setTimeout(function() {
+            that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+      </script>
+
+      <!-- FIM DO EFEITO -->
+        <p>
+            Agora é a hora da verdade, A maneira mais rápida para aumentar seu faturamento será com anúncios online, <strong>pare de perder clientes</strong>, e mostrem a eles o que você tem a oferecer. Irei te ajudar com tudo que precisar, apenas observe abaixo. 
+
+        </p>
+    </header>
+    <section>
+        <article class="servico">
+            <a name="servico"></a>
+            <h1>SERVIÇOS</h1>
+            <div class="bloco first">
+                <img src="imagens/codigo.jfif" alt="html">
+                <h1>CRIAÇÂO DE SITES</h1>
+                <p>Criação de  Landing Page, Portfólios ou até sites de apresentações para alguns comércios. Da maneira que você escolher.</p>
+            </div>
+            <div class="bloco second">
+                <h1>ANÚNCIOS ONLINE</h1>
+                <p>Mostre a todos o que você tem a oferecer e tenha um alcançe clientes de toda a cidade.</p>
+                <img src="imagens/ads.png" alt="google ads">
+            </div>
+            <div class="bloco third">
+                <img src="imagens/instagram.jfif" alt="postagens">
+                <h1>CRIAÇÂO DE POSTAGENS</h1>
+                <p>Criação de  Landing Page, Portfólios ou até sites de apresentações para alguns comércios. Da maneira que você escolher</p>
+            </div>
+        </article>
+        <article class="processos">
+            <a name="processo"></a>
+            <h1>PROCESSOS</h1>
+            <div class="painel" id="first">
+                <div class="numero">1</div>
+                <h1>CONVERSA</h1>
+                <p>Conversaremos para que todas as ideias sejam discutidas e as dúvidas sejam tiradas, além de conversarmos sobre o orçamento e o quanto deseja investir.</p>
+                <div class="base"></div>
+                <div class="base2"></div>
+            </div>
+            <div class="painel" id="second">
+                <div class="encaixe"></div>
+                <div class="numero">2</div>
+                <h1>PLANEJAMENTO</h1>
+                <p>Produziremos uma espécie de imagem para seu site, ou até, um modelo de como ficaram suas postagens do instagram, assim você tera uma base.</p>
+                <div class="base"></div>
+                <div class="base2"></div>
+            </div>
+            <div class="painel" id="third">
+                <div class="encaixe"></div>
+                <div class="numero">3</div>
+                <h1>EXECUÇÃO</h1>
+                <p>Após tudo estar confirmado, começaremos com a produção, assim caso haja algum problema durante o processo você será informado(a) assim que posível, ou caso queria alguma alteração.</p>
+                <div class="base"></div>
+                <div class="base2"></div>
+            </div>
+            <div class="painel" id="four">
+                <div class="encaixe"></div>
+                <div class="numero">4</div>
+                <h1>FINALIZAÇÃO</h1>
+                <p>Após a conclusão do projeto, iremos pedir o pagamento e cuidaremos para que as atualizações do site, ou seus anúncios continuem no ar.  </p>
+            </div>
+        </article>
+        <article class="trabalhos">
+            <h1>NOSSOS TRABALHOS</h1>
+            <div class="base">
+                <img src="imagens/trabalhos/wordcell.png" alt="foto">
+                <div class="legenda">
+                    <h1>CATALÓGO</h1>
+                    <a href="https://davi-souza-dev.github.io/WordCell--Assistencia-Tecnica/" target="_blank">VER</a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <a name="contato"></a>
+        <h1>ENTRE EM CONTATO</h1>
+        <div class="container">
+            <div class="rede" id="instagram">
+                <a href="#" target="_blank">
+                    <img src="imagens/instagramicon.png" alt="insta">
+                </a>
+            </div>
+            <div class="rede" id="whats">
+                <a href="#" target="_blank"><img src="imagens/whatsaapicon.png" alt="whatsaapicon"></a>
+            </div>
+            <div class="rede">
+                <a href="mailto:daviekalebe2200@gmail.com" target="_blank">
+                    <img src="imagens/emailicon.png" alt="emailicon">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
