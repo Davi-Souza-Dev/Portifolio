@@ -42,6 +42,7 @@ article > h1{
   position: absolute;
   width: 100%;
   top: 0;
+  z-index: 1;
 }
 
 .topnav#home {
@@ -50,6 +51,7 @@ article > h1{
 
 .topnav #myLinks {
   display: none;
+  z-index: 1;
 }
 
 
