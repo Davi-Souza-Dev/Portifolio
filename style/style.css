@@ -52,7 +52,6 @@ section > h1{
   font-weight: bolder;
   align-self: center;
   width: 100%;
-  text-align: center;
 }
 
 section > h1 > a{
@@ -87,53 +86,96 @@ section > div.btn > a{
 
 /* INFORMAÇOES  */
 
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titulo {
+    from{
+     transform: translate(-100%,0);
+    }
+    to{
+      transform: translate(0,0);
+    }
+
+}
+
+@keyframes aparecer {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+@keyframes move {
+    from{
+      transform: translateY(-20%);
+    }
+    to{
+      transform: translateY(20%);
+    }
+}
+
+
 header{
-  height: 400px;
+  height: 100vh;
   width: 100%;
+  overflow: hidden;
+
   background-color: #00D1FF;
-  border-radius: 0px 0px 45px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-}
-header  > nav{
-  background-color: var(--cor1);
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
 }
 
-div.op{
-  height: 50px;
-  width: 50px;
-  background-color: var(--cor6);
-  margin-left: 10px;
-  margin-right: 10px;
-}
-div.op > a > img{
-  width: 30px;
-  padding: 10px;
-}
 header > h1{
   font-family: var(--fontTitulo);
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 20px;
+  animation: titulo 0.6s ease-in-out forwards ;
 }
 
 header > h2 > a{
   text-decoration: none;
   font-family: var(--fontTitulo);
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 30px;
   color: var(--cor4);
+  animation: tracking-in-contract-bck-bottom  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 header > p{
@@ -144,6 +186,16 @@ header > p{
   width: 90%;
   font-weight: bolder;
   text-align: center;
+  animation: aparecer 3s forwards;
+
+}
+
+header > img{
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  animation: move 0.4s infinite ease-out alternate-reverse;
 }
 
 strong{
@@ -159,12 +211,27 @@ section > article.servico{
   margin-top: 30px;
 }
 
+
 article > h1{
   font-family: var(--fontTitulo);
   font-weight: bolder;
   font-size: 30px;
   text-decoration: underline var(--cor1) 4px;
   margin-bottom: 20px;
+
+  animation: aparecer 0.8s ease-in forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+  view-timeline-inset: 50%;
+}
+
+@keyframes slideright {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translate(0);
+  }
 }
 
 article > div.bloco{
@@ -177,6 +244,11 @@ article > div.bloco{
   flex-wrap: wrap;
   flex-direction: column;
   overflow: hidden;
+  animation: slideright 2ms ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+  view-timeline-inset: 50%;
+
 }
 
 div.bloco > img{
@@ -207,6 +279,7 @@ div.bloco > p{
 
 div.second{
   border-radius: 0px 0px 0px 0px;
+
 }
 
 div.second > img{
@@ -240,6 +313,22 @@ article.processos > div.painel{
   flex-direction: column;
   justify-content: flex-start;
   margin: 3px;
+
+  animation: encaixar 1s ease-in-out ;
+  animation-timeline: view();
+  animation-range: cover 0% cover  30%;
+  view-timeline-inset: 50%;
+}
+
+@keyframes encaixar {
+  from{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to{
+    opacity: 100;
+    transform: translateY(0);
+  }
 }
 
 div#first{
