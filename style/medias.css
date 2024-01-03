@@ -8,145 +8,92 @@
     --cor4: #9a950d;
   }
 
-@media screen and (min-width: 480px ) {
-    header{
-        height: 60px;
-      }
+@media screen and (min-width: 760px ) {
+  section > img{
+    width: 200px;
+    height: 200px;
+    animation: aparecer 3s forwards;
+  }
+  /*INFORMAÇões*/
+  
+  header > p{
+    width: 60%;
+  }
 
-      .topnav {
-        height: 60px;
-      }
-    
-      article.inicio{
-        height: 370px;
-      }
+  article > div.bloco{
+    height: 200px;
+    width: 50%;
+  }
 
-      article.inicio{
-        height: 230px;
-      }
+  div.bloco > img{
+    height: 100%;
+    width: 50%;
+    align-self: flex-start;
+  }
 
-      article > h1#name{
-        font-size: 40px;
-      }
+  div.first{
+    border-radius: 45px 45px 0px 0px;
+  }
 
-      article  > h1 > a#inicioText{
-        font-size: 20px; 
-        text-align: center;
-      }
+  div.third{
+    border-radius: 0px 0px 40px 40px;
+  }
 
-      article.sobremim > h1{
-        font-size: 40px;
-    }
+  article.processos > div.painel{
+    width: 350px;
+    height: 350px;
+  }
 
-      
-    article.sobremim > p{
-        width: 200px;
-        height: 290px;
-        font-size: 20px;
-    }
+  div.painel > h1{
+    font-size: 30px;
+  }
 
-    article.sobremim > div.foto{
-        width: 200px;
-        height: 290px;
-      }
+  div.painel > p{
+    width: 80%;
+    font-size: 20px;
+  }
 
-      article.carrosel > h1{
-        font-size: 40px;
-      }
+  footer{
+    height: 200px;
+    width: 50%;
+    margin: auto;
+  }
 
-      .slides > div {
-        width: 400px;
-        height: 400px;
-      }
+  /*Sites*/
 
-      
-      .slider {
-        width: 400px;
-      }
+  article.site > p{
+    width: 50%;
+  }
 
-      .face h1{
-        font-size: 25px;
-      }
+  article > div.conteudo{
+    height: 200px;
+    line-height: 200px;
+    width: 50%;
+  }
 
-      .face p{
-        font-size: 20px;
-      }
+  /*Anuncios*/
 
-      .servicos > h1{
-        font-size: 40px;
-      }
-
-      .servicos > .sv{
-        width: 400px;
-        height: 200px;
-      }
-
-      .sv > p{
-        font-size: 20px;
-      }
-
-      article.beneficios >  div.blocoText > h1#titulo > a{
-       font-size: 40px;
-      }
-
-      article.beneficios > div#foto2{
-        width: 200px;
-        height: 290px;
-      }
-
-      article.beneficios > p{
-        font-size: 20px;
-        width: 200px;
-      }
-
-      article.beneficios > h1{
-        padding-top: 30px;
-        width: 100%;
-        font-size: 30px;
-        padding-left: 10px;
-      }
-
-      article.beneficio{
-        height: 200px;
-      }
-
-      article.beneficio > h1 { 
-        font-size: 20px;
-        align-self: center;
-    }
-      
-      article.beneficio > p{
-        font-size: 20px;
-        align-self: center;
-      }
-
-      article#bn2{
-        background-color: var(--cor2);
-      }
-      
-      article#bn2 > h1{
-        text-align: center;
-        color: var(--cor1);
-      }
-      
-      article#bn2 > p{
-        text-align: center;
-        color: var(--cor1);
-      }
-
-      footer{
-        background-color: var(--cor1);
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      footer > article.contatos{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px 70px;
-      }
 }
+
+article.anuncio > p{
+ width: 50%;
+ text-align: center;
+}
+
+article.anuncio > iframe{
+  width: 500px;
+  height: 500px;
+}
+
+/*Postagens*/
+
+article.postagem > p {
+  width: 50%;
+  font-size: 30px;
+  text-align: center;
+}
+
+div.postagens > img{
+  width: 50%;
+}
+

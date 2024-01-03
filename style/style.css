@@ -10,8 +10,8 @@
 :root{
   --fontTitulo: "Roboto", "Helvetica", sans-serif;
   --cor1: black;
-  --cor2: black;
-  --cor3: #97DDFF;
+  --cor2: rgb(0, 0, 0);
+  --cor3: white;
   --cor4: white;
   --cor5: red;
   --cor6: #000000;
@@ -193,7 +193,7 @@ section > div.btn{
 }
 
 section > div.btn > a{
-  color: var(--cor4);
+  color: white;
   text-decoration: none;
   font-size: 15px;
   font-family: var(--fontTitulo);
@@ -297,7 +297,7 @@ header > h2 > a{
   font-family: var(--fontTitulo);
   font-weight: bolder;
   font-size: 30px;
-  color: var(--cor4);
+  color: white;
   animation: tracking-in-contract-bck-bottom  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
@@ -367,7 +367,7 @@ article > h1{
 article > div.bloco{
   height: 180px;
   width: 100%;
-  background-color: var(--cor2);
+  background-color: black;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -619,7 +619,7 @@ div.base > div.legenda{
   align-items: center;
   flex-direction: column;
   border-radius: 0px 0px 20px 20px;
-  background-color: var(--cor2);
+  background-color: black;
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -793,6 +793,10 @@ header.site > div.barra{
 }
 
 section > article.site{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -960,6 +964,12 @@ header.postagem{
   
 }
 
+article.postagem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 header.postagem > h1{
   color: white;
   font-size: 30px;
