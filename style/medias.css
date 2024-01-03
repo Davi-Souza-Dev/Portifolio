@@ -8,7 +8,7 @@
     --cor4: #9a950d;
   }
 
-@media screen and (min-width: 760px ) {
+@media screen and (min-width: 600px ) {
   section > img{
     width: 200px;
     height: 200px;
@@ -73,8 +73,6 @@
 
   /*Anuncios*/
 
-}
-
 article.anuncio > p{
  width: 50%;
  text-align: center;
@@ -97,3 +95,4 @@ div.postagens > img{
   width: 50%;
 }
 
+}
