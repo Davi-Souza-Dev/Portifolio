@@ -21,14 +21,6 @@ html , body{
   width: 100%;
 }
 
-@keyframes mudar-cor {
-  from{
-    background-color: black;
-  }
-  to{
-    background: white;
-  }
-}
 
 section#inicio{
   display: flex;
@@ -37,7 +29,6 @@ section#inicio{
   flex-direction: column;
   height: 90vh;
   width: 100%;
-  animation: mudar-cor 1s ease-in-out forwards;
 }
 
 article > h1{
@@ -53,8 +44,17 @@ article > h1{
   top: 0;
 }
 
+.topnav#home {
+  background-color: white;
+}
+
 .topnav #myLinks {
   display: none;
+}
+
+
+.menu-icon{
+  filter: invert();
 }
 
 .menu-icon{
@@ -71,19 +71,27 @@ article > h1{
   display: block;
 }
 
+.topnav#home a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
 .topnav a.icon {
   display: block;
   position: absolute;
   right: 0;
   top: 0;
-  background: url(../imagens/menu.png) no-repeat;ze: cover;
+  background: url(../imagens/menu.png) no-repeat;
   background-position: center center;
   margin: auto;
 }
 
 .topnav a:hover {
-  background-color: white;
-  color: black;
+  background-color: rgba(0, 0, 0, 0.372);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
 }
 
@@ -277,6 +285,11 @@ header > h1{
   color: red;
 }
 
+header > h1#nome-empresa{
+  font-size: 30px;
+  color: white;
+}
+
 header > h2 > a{
   text-decoration: none;
   font-family: var(--fontTitulo);
@@ -463,7 +476,7 @@ article.processos > div.painel{
 
   animation: encaixar 1s ease-in-out ;
   animation-timeline: view();
-  animation-range: cover 0% cover  30%;
+  animation-range: cover 0% cover  60%;
   view-timeline-inset: 50%;
 }
 
@@ -756,6 +769,7 @@ div#instagram{
 }
 
 /* INFORMAÇOES - FIm */
+/* CONFIGURAÇÂO PÀGINA DE SITES */
 header.site{
   height: 100vh;
   position: relative;
@@ -766,6 +780,7 @@ header.site > h1{
   font-size: 30px;
   text-align: center;
   padding: 20px;
+  text-decoration: none;
 }
 
 header.site > div.barra{
@@ -863,6 +878,114 @@ div#text{
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* CONFIGURAÇÂO PÀGINA DE SITES */
+
 
 /* FIM DA CONFIGURAÇÂO */
+/*Página anuncio*/
+article.anuncio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+article.anuncio > h1{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  animation: aparecer 0.8s ease-in forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 20%;
+  view-timeline-inset: 50%;
+  
+}
+
+article.anuncio > p{
+  text-indent: 20px;
+  font-size: 20px;
+  animation: aparecer 0.8s ease-in forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 40%;
+  view-timeline-inset: 50%;
+}
+
+article.anuncio > iframe{
+  width: 80%;
+  border-radius: 20px;
+  animation: aparecer 0.8s ease-in forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+  view-timeline-inset: 50%;
+}
+article.anuncio > iframe:hover{
+  border-radius: 10px;
+  transition: 0.4s;
+}
+/*Fim da pagina anuncio*/
+
+/*POSTARGENS*/
+header.postagem{
+  height: 100vh;
+  position: relative;
+  background-color: ;
+  animation: insta 5s ease alternate infinite;
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(-45deg, #F24484, #f930eb,#D943CF,#D943CF ,#7B44F2 ,#7B44F2,  #F2CB05, #f25405 , #F2911B);
+}
+
+@keyframes cores {
+  0%{
+    color: white;
+  }
+  20%{
+    color: rgb(209, 209, 255);
+  }
+  40%{
+    color: #f1e9c4;
+  }
+  60%{
+    color: rgb(255, 166, 166);
+  }
+  80%{
+    color: rgb(210, 169, 249);
+  }
+  100%{
+    color: #000;
+  }
+  
+}
+
+header.postagem > h1{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;;
+}
+
+header.postagem > div.barra{
+  height: 10px;
+  width: 100%;
+  background-color: white;
+}
+
+div.postagens{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+div.postagens > img{
+  width: 80%;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  animation: encaixar 2ms ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+  view-timeline-inset: 50%;
+}
