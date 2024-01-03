@@ -39,6 +39,68 @@ section#inicio{
   width: 100%;
   animation: mudar-cor 1s ease-in-out forwards;
 }
+
+article > h1{
+  text-align: center;
+}
+/* MENU */
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--cor1);
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.menu-icon{
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../imagens/menu.png) no-repeat;ze: cover;
+  background-position: center center;
+  margin: auto;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+#logo {
+  color: white;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  display: inline-block;
+}
+
+#active{
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+/* FIM - MENU */
 /* INICIO */
 
 div.inicio{
@@ -74,6 +136,11 @@ section > h1 > a{
   color: var(--cor5);
   cursor: default;
   text-align: center;
+}
+
+section > img{
+  width: 50%;
+  animation: aparecer 3s forwards;
 }
 
 @keyframes slide-in-blurred-top {
@@ -254,6 +321,10 @@ section > article.servico{
   margin-top: 30px;
 }
 
+article > p{
+  padding: 20px;
+}
+
 
 article > h1{
   font-family: var(--fontTitulo);
@@ -261,6 +332,7 @@ article > h1{
   font-size: 30px;
   text-decoration: underline var(--cor1) 4px;
   margin-bottom: 20px;
+  padding: 20px;
 
   animation: aparecer 0.8s ease-in forwards;
   animation-timeline: view();
@@ -325,7 +397,7 @@ div.first{
   }
 }
 
-div.bloco > div.btn{
+div.bloco > a > div.btn{
   margin-top: 20px;
   width: 95px;
   height: 20px;
@@ -344,7 +416,7 @@ div.bloco > div.btn{
 }
 
 
-div.btn > a{
+div.btn{
   text-align: center;
   color: white;
   text-decoration: none;
@@ -685,7 +757,111 @@ div#instagram{
 
 /* INFORMAÇOES - FIm */
 header.site{
-  height: 200px;
+  height: 100vh;
+  position: relative;
+}
+
+header.site > h1{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+header.site > div.barra{
+  height: 10px;
+  width: 100%;
+  background-color: white;
+  animation: encaixar 1s ease-in-out ;
+}
+
+section > article.site{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: var(--fontTitulo);
+  overflow: hidden;
+}
+
+@keyframes fundo {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 50% 100%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+article > div.conteudo{
+  height: 100px;
+  width: 96%;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  border: 5px solid #000;
+  background-color: black;
+  margin-bottom: 30px;
+
+}
+
+div#colorido{
+  background: linear-gradient(to left, #F00 0%, #FFC700 27.04%, #FFE500 37.25%, #70FF00 48.47%,  #0029FF 75.51%, #FF00D6 97.96%);
+  border: 5px solid #000;
+  animation: fundo 10s ease-in-out alternate-reverse infinite;
+  background-size: 300% 300%;
+}
+
+div#imagem{
+  background-image: url(../imagens/fundo.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+div#animado{
+  animation: jello-horizontal  1s both infinite; 
+
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+div#text{
+  background-image: url(../imagens/text.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 /* CONFIGURAÇÂO PÀGINA DE SITES */
 
