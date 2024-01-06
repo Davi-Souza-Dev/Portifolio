@@ -21,23 +21,23 @@
   }
 
   article > div.bloco{
-    height: 200px;
-    width: 50%;
+    height: 300px;
+    width: 300px;
   }
 
   div.bloco > img{
-    height: 100%;
-    width: 50%;
-    align-self: flex-start;
+    width: 100px;
+    filter: invert();
+  }
+  
+  div.bloco > h1{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--fontTitulo);
+    color: white;
   }
 
-  div.first{
-    border-radius: 45px 45px 0px 0px;
-  }
-
-  div.third{
-    border-radius: 0px 0px 40px 40px;
-  }
 
   article.processos > div.painel{
     width: 350px;
@@ -55,7 +55,7 @@
 
   footer{
     height: 200px;
-    width: 50%;
+    width: 80%;
     margin: auto;
   }
 
