@@ -7,47 +7,130 @@
     <title>Portifolio</title>
 </head>
 <body>
+    <a name="topo"></a>
+    <a href="#topo" class="btn-topo"></a>
     <header>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+                
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#habilidades">Habilidades</a>
+              <a href="#projetos">Projetos</a>
+              <a href="#contato">Contato</a>
+            </div>
+          </div>
+          
+          <script>
+          /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
 
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
     </header>
     <section>
         <article>
             <h1>DAVI DE SOUZA</h1>
-            <img src="imagens/foto-perfil.png" alt="foto">
+            <div class="img"></div>
             <p>Faço curso técnico de informática Na Etec em São Paulo, estudo na área de informática desde meus 10 anos, começando com o pacote Office até passar por áreas de programação e desenvolvimento web.</p>
             <a href="arquivos/curriculo.docx"><p>BAIXAR CURRICULO</p> <img src="imagens/scrolldon.png" alt="icon"></a>
         </article>
+        <a name="habilidades"></a>
         <article class="habilidades">
             <h1>HABILIDADES</h1>
-            <div class="card-container">
-                <img src="imagens/office.png" alt="habilidade-icon">
-                <h1>PACOTE OFFICE</h1>
-                <p>
-                    Possuo habilidades com Word, Excel e PowerPoint, com competências para desenvolver planilhas, gerir textos e criar apresentações para diversas ocassiões.
-                </p>
+            <div class="container-hab">
+                <div class="container-card" id="hb1">
+                    <div class="header-card">
+                        <img src="imagens/info.png" alt="info-icon">
+                    </div>
+                    <div class="section-card">
+                        <h1>INFOMÁRTICA</h1>
+                        <p>AVANÇADO</p>
+                    </div>
+                </div>
+                <div class="container-card" id="hb2">
+                    <div class="header-card">
+                        <img src="imagens/css-3.png" alt="css-icon">
+                    </div>
+                    <div class="section-card">
+                        <h1>CSS</h1>
+                        <p>INTERMÉDIARIO</p>
+                    </div>
+                </div>
+                <div class="container-card" id="hb3">
+                    <div class="header-card">
+                        <img src="imagens/html.png" alt="html-icon">
+                    </div>
+                    <div class="section-card">
+                        <h1>HTML5</h1>
+                        <p>INTERMÉDIARIO</p>
+                    </div>
+                </div>
+                <div class="container-card" id="hb4">
+                    <div class="header-card">
+                        <img src="imagens/js.png" alt="js">
+                    </div>
+                    <div class="section-card">
+                        <h1>JAVASCRIPT</h1>
+                        <p>BÁSICO</p>
+                    </div>
+                </div>
+                <div class="container-card" id="hb5">
+                    <div class="header-card">
+                        <img src="imagens/eng.png" alt="ingles">
+                    </div>
+                    <div class="section-card">
+                        <h1>inglês</h1>
+                        <p>básico</p>
+                    </div>
+                </div>
             </div>
-            <div class="card-container">
-                <img src="imagens/info.png" alt="habilidade-icon">
-                <h1>INFORMÁTICA</h1>
-                <p>
-                    Habilidades como manutenção, controle e saber usar o computador de forma dinâmica são umas das principais que consegui adquirir com o tempo.
-                </p>
-            </div>
-            <div class="card-container">
-                <img src="imagens/code-icon.png" alt="habilidade-icon">
-                <h1>DESENVOLVIMENTO WEB</h1>
-                <p>
-                    Consigo desenvolver, ou personalizar sites para negócios ou criar landing pages, podendo assim ter uma apresentação mais profissional e moderna.
-                </p>
-            </div>
-            <div class="card-container">
-                <img src="imagens/talk-icon.png" alt="habilidade-icon">
-                <h1>COMUNICAÇÃO</h1>
-                <p>
-                    A comunicação é uma das habilidades necessárias em qualquer área e por isso desenvolvi essa habilidade, tanto para venda como para expressar ideias.
-                </p>
+        </article>
+        <a name="projetos"></a>
+        <article class="projetos">
+            <h1>PROJETOS</h1>
+            <div class="container-projeto">
+                <img src="imagens/projeto1.png" alt="imagem-projeto">
+                <div class="content-projeto">
+                    <h1>name</h1>
+                    <p>
+                    Projeto criado para ser adicionado ao meu portifólio, onde utilizei minhas habilidades de HTML CSS e JAVASCRIPT para criar um site para um evento fictício.
+                    </p>
+                    <a href="https://davi-souza-dev.github.io/Projeto1/" target="_blank">ACESSAR</a>
+                </div>
             </div>
         </article>
     </section>
+    <footer>
+        <a name="contato"></a>
+        <h1>Contato</h1>
+        <div>
+            <a href="#" id="link1">
+                <img src="imagens/whatsapp.png" alt="link-imagem">
+            </a>
+            <a href="#" id="link2">
+                <img src="imagens/github.png" alt="link-imagem">
+            </a>
+            <a href="#" id="link3">
+                <img src="imagens/instagram.png" alt="link-imagem">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

@@ -8,9 +8,80 @@
 
 header{
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-self: center;
 }
+
+a.btn-topo{
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    border-radius: 5px;
+    background: url(../imagens/cima.png);
+    background-size: cover;
+    
+}
+
+/*MENU DROPDOWMN*/
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: url(../imagens/menu.png);
+    filter: invert();
+    background-size: cover;
+  }
+  
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    width: 100px;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 0px;
+    min-width: 160px;
+    overflow: auto;
+    z-index: 2;
+    background-color: black;
+    border-radius: 5px;
+    animation: surgir 0.2s ease-in-out; 
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+  
+  }
+  .show {display: block;}
+
+  @keyframes surgir {
+    to{
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+    }
+  }
+/*FIM MENU*/
+
 
 section{
     display: flex;
@@ -36,16 +107,20 @@ article >  h1{
     text-align: center;
 }
 
-article > img{
-    width: 190px;
-    height: 190px;
+article > .img{
+    width: 40%;
+    height: 260px;
     margin: 20px 0px;
     border-radius: 20px;
-    border: 2px solid black;
+    margin-bottom: -2px;
+    background: url(../imagens/foto-perfil.jpg);
+    background-position: center center;
+    background-size: cover;
+    
 }
 
 article > p{
-    width: 90%;
+    width: 40%;
     font-family: "Inter", sans-serif;
     text-align: justify;
     text-indent: 20px;
@@ -70,43 +145,326 @@ article > a > img{
     height: 100%;
 }
 
+article.habilidades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
 article.habilidades > h1{
     font-size: 25px;
     width: 255px;
     height: 30px;
     border: 3px solid black;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
-
-article.habilidades > div.card-container{
-    width: 250px;
-    height: 300px;
+article.habilidades > div.container-hab{
     display: flex;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 5px solid black;
+    gap: 10px 20px;
+    width: 100%;
+}
+div.container-hab > div.container-card{
+    width: 150px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5px;
     border-radius: 20px;
-    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-div.card-container > img{
+div.container-card:hover{
+    background-color: black;
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    
+}
+div.container-card:hover > div.header-card > img{
     width: 100px;
-    height: 100px;
+    filter: none;
+}
+div.container-card:hover > div.section-card >p {
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+div.container-card:hover > div.section-card >h1 {
+    color: white;
+    transition: 0.3s ease-in-out;
 }
 
-div.card-container > h1{
-    width: 90%;
+div#hb1 > div.header-card{
+    background: linear-gradient(150deg, #00e7ff, #4ceeff, #ccfaff);
+}
+
+div#hb2 > div.header-card{
+    background: linear-gradient(150deg, #0645ba, #65bef5, #f5fdfe);
+}
+
+div#hb3 > div.header-card{
+    background: linear-gradient(150deg, #FF7900, #fe8619, #feaa5e, #fed4ae, rgba(254,212,174,1));
+}
+
+div#hb4 > div.header-card{
+    background: linear-gradient(150deg, #43ff01, #c0fe6c, #ecfed2, #fbfef6);
+}
+
+div#hb5 > div.header-card{
+    background: linear-gradient(150deg, #ff1b00, #fe7667, #fed1cc);
+}
+
+div.container-card > div.header-card{
+    background-color: rgb(0, 200, 255);
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 100% 0% / 20px 20px 50% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+div.header-card > img{
+    width: 100px;
+    filter: invert();
+
+}
+
+
+div.container-card > div.section-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+}
+
+div.section-card > h1{
+    width: 100%;
     text-align: center;
-    font-size: 23px;
-    font-family: 'Inter',sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
 }
 
-div.card-container > p{
+div.section-card > p{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+}
+
+/*ANIMAÇÃO DAS HABILIDADES*/
+
+@keyframes piscar1 {
+    to{
+        transform: scale(1);
+    }
+    from{
+        transform: scale(1.1);
+    }
+}
+
+div#hb1{
+    animation: piscar1 1s  1s  ease-in-out infinite alternate-reverse;
+    animation-iteration-count: 2;
+}
+
+div#hb2{
+    animation: piscar1 1s 2s ease-in-out infinite alternate-reverse;
+    animation-iteration-count: 2;
+    
+}
+div#hb3{
+    animation: piscar1 1s 3s ease-in-out infinite alternate-reverse;
+    animation-iteration-count: 2;
+}
+div#hb4{
+    animation: piscar1 1s 4s ease-in-out infinite alternate-reverse;
+    animation-iteration-count: 2;
+}
+div#hb5{
+    animation: piscar1 1s 5s ease-in-out infinite alternate-reverse;
+    animation-iteration-count: 2;
+}
+/*FIM DA ANIMAÇÃO*/
+
+article.projetos > h1{
+    font-size: 25px;
+    width: 255px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+article.projetos{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+article.projetos > div.container-projeto{
+    width: 300px;
+    border-radius: 10px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+div.container-projeto:hover{
+    transform: scale(1.02);
+}
+
+div.container-projeto > img{
+    width: 300px;
+    background-color: gray;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px dashed black;
+}
+
+div.container-projeto > div.content-projeto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+}
+
+div.content-projeto > h1{
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+}
+
+div.content-projeto > p{
     width: 90%;
-    text-align: justify;
-    font-size: 19px;
+    font-family: 'Inter', sans-serif;
     text-indent: 20px;
+    text-align: justify;
+}
+
+div.content-projeto > a{
+    margin-top: 5px;
+    width: 200px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    border-radius: 20px;
+    position: relative;
+}
+
+div.content-projeto > a::before{
+    content: '';
+    width: 0%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+div.content-projeto > a:hover:before{
+    width: 60%;
+    transition: 0.2s ease-in-out;
+}
+
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 10% 10% 0px 0px;
+}
+
+footer > h1{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Inter",sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+footer > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 80%;
+}
+
+footer > div > a{
+    width: 80px;
+    height: 80px;
+    filter: invert();
+    --color: rgb(0, 0, 0); /* the color of the border */
+    --border: 5px;   /* the thickness of the border */
+    --offset: 5px;   /* control the movement of the border */
+    --gap: 5px;       /* the gap on hover */
+    border-radius: 50%;
+    cursor: pointer;
+    padding: calc(var(--border) + var(--gap));
+    border: var(--offset) solid #0000;
+    --_m: radial-gradient(50% 50%, #000 calc(100% - var(--offset)),#0000 calc(100% - var(--border)));
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    --_g: #0000 calc(99% - var(--border)), var(--color) calc(100% - var(--border)) 99%,#0000;
+    --_s: var(--offset);
+    --_r: 100% 100% at;
+    background:
+      radial-gradient(var(--_r) 0    0   ,var(--_g)) calc(100% + var(--_s)) calc(100% + var(--_s)),
+      radial-gradient(var(--_r) 100% 0   ,var(--_g)) calc(0%   - var(--_s)) calc(100% + var(--_s)),
+      radial-gradient(var(--_r) 0    100%,var(--_g)) calc(100% + var(--_s)) calc(0%   - var(--_s)),
+      radial-gradient(var(--_r) 100% 100%,var(--_g)) calc(0%   - var(--_s)) calc(0%   - var(--_s));
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    transition: .4s;
+
+}
+
+footer > div > a:hover {
+    --_s: 0px
+  }
+
+div > a > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
