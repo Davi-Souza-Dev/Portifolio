@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/medias.css">
     <title>Portifolio</title>
 </head>
 <body>
     <a name="topo"></a>
-    <a href="#topo" class="btn-topo"></a>
+   
     <header>
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">
+            <button onclick="myFunction(), mudarfundo()" class="dropbtn" id="dropbtn">
                 
             </button>
             <div id="myDropdown" class="dropdown-content">
@@ -24,20 +25,30 @@
           <script>
           /* When the user clicks on the button, 
           toggle between hiding and showing the dropdown content */
+          const btn = document.getElementById('dropbtn');
           function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          function mudarfundo(){
+            if(document.getElementById("myDropdown").classList.contains("show")){
+                btn.style.backgroundImage = "url('imagens/menu-close.png')";
+            }else{
+                btn.style.backgroundImage = "url('imagens/menu.png')";  
+            }
           }
           
           // Close the dropdown if the user clicks outside of it
           window.onclick = function(event) {
+
             if (!event.target.matches('.dropbtn')) {
               var dropdowns = document.getElementsByClassName("dropdown-content");
               var i;
-
               for (i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
                   openDropdown.classList.remove('show');
+               
                 }
               }
             }
@@ -45,7 +56,7 @@
           </script>
     </header>
     <section>
-        <article>
+        <article id="apresentacao">
             <h1>DAVI DE SOUZA</h1>
             <div class="img"></div>
             <p>Faço curso técnico de informática Na Etec em São Paulo, estudo na área de informática desde meus 10 anos, começando com o pacote Office até passar por áreas de programação e desenvolvimento web.</p>
@@ -108,7 +119,7 @@
             <div class="container-projeto">
                 <img src="imagens/projeto1.png" alt="imagem-projeto">
                 <div class="content-projeto">
-                    <h1>name</h1>
+                    <h1>TechConect</h1>
                     <p>
                     Projeto criado para ser adicionado ao meu portifólio, onde utilizei minhas habilidades de HTML CSS e JAVASCRIPT para criar um site para um evento fictício.
                     </p>
@@ -132,5 +143,6 @@
             </a>
         </div>
     </footer>
+    <a href="#topo" class="btn-topo"></a>
 </body>
 </html>
