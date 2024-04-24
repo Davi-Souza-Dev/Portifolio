@@ -17,4 +17,18 @@
         width: 500px;
         margin-top: 20px;
     }
+
+    article.projetos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+    }
+
+    article.projetos > h1{
+        width: 100%;
+    }
+
+    article.habilidades > h1{
+        width: 100%;
+    }
 }
