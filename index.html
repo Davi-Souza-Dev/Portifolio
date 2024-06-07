@@ -1,168 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/medias.css">
-    <title>Portifolio</title>
-</head>
-<body>
-    <a name="topo"></a>
-   
-    <header>
-        <div class="dropdown">
-            <button onclick="myFunction(), mudarfundo()" class="dropbtn" id="dropbtn">
-                
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#habilidades">Habilidades</a>
-              <a href="#projetos">Projetos</a>
-              <a href="#contato">Contato</a>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header></header>
+    <section>
+      <article class="topo at1">
+        <!-- <div class="foto">
+            <img src="imagens/foto-perfil.jpg" alt="foto">
+        </div> -->
+        <h1>Davi <strong>de Souza</strong></h1>
+        <h2>FRONT-END DEVELOPER</h2>
+      </article>
+      <article class="habilidades at2">
+        <h2>Minhas</h2>
+        <h1><strong>Habilidades</strong></h1>
+        <div class="container-cards">
+          <div class="card">
+            <div class="bg">
+              <img src="imagens/info.png" alt="icon" />
+              <h1>Informática</h1>
+              <p>
+                Possuo habilidades com computadores tanto na parte de hambiente
+                quanto na administração de softwares e programas como o
+                <strong>Pacote Office</strong>.
+              </p>
+            </div>
+            <div class="blob"></div>
+          </div>
+          <div class="card">
+            <div class="bg">
+              <img src="imagens/html.png" alt="icon" />
+              <h1>Desenvolvimento Web</h1>
+              <p>
+                Com tecnologias de <strong>HTML</strong>, <strong>CSS</strong> e
+                <strong>Javascript</strong>, além de serviços e sites para
+                agilizar o processo, consigo desenvolver aplicações Web, como
+                <strong>Sites</strong> <strong>intitucionais</strong> e
+                <strong>Landing</strong> <strong>Pages</strong>.
+              </p>
+            </div>
+            <div class="blob"></div>
+          </div>
+          <div class="card">
+            <div class="bg">
+              <img src="imagens/ingles.png" alt="icon" />
+              <h1>Inglês</h1>
+              <p>
+                C<strong>onsigo compreender muito bem</strong> mas possuo uma ligeira dificuldade
+                para falar em inglês, por isso tenho mais <strong>
+                    habilidade com
+                    entendimento em inglês
+                </strong>.
+              </p>
+            </div>
+            <div class="blob"></div>
+          </div>
+        </div>
+      </article>
+      <article class="carrosel">
+        <h2>meus</h2>
+        <h1><strong>Projetos</strong></h1>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a
+                href="https://davi-souza-dev.github.io/Projeto2/"
+                target="_blank"
+              >
+                <img src="imagens/projeto-img-1.png" alt="foto-projeto" />
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a
+                href="https://davi-souza-dev.github.io/Projeto1/"
+                target="_blank"
+              >
+                <img src="imagens/projeto-img-2.png" alt="foto-projeto" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="https://davi-souza-dev.github.io/Projeto3/"
+                target="_blank"
+              >
+                <img src="imagens/projeto-img-3.png" alt="foto-projeto" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a
+                href="https://davi-souza-dev.github.io/devbeytestudios/"
+                target="_blank"
+              >
+                <img src="imagens/projeto-img-4.png" alt="foto-projeto" />
+              </a>
             </div>
           </div>
-          
-          <script>
-          /* When the user clicks on the button, 
-          toggle between hiding and showing the dropdown content */
-          const btn = document.getElementById('dropbtn');
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
+        </div>
 
-          function mudarfundo(){
-            if(document.getElementById("myDropdown").classList.contains("show")){
-                btn.style.backgroundImage = "url('imagens/menu-close.png')";
-            }else{
-                btn.style.backgroundImage = "url('imagens/menu.png')";  
-            }
-          }
-          
-          // Close the dropdown if the user clicks outside of it
-          window.onclick = function(event) {
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-            if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-               
-                }
-              }
-            }
-          }
-          </script>
-    </header>
-    <section>
-        <article id="apresentacao">
-            <h1>DAVI DE SOUZA</h1>
-            <div class="img"></div>
-            <p>Faço curso técnico de informática Na Etec em São Paulo, estudo na área de informática desde meus 10 anos, começando com o pacote Office até passar por áreas de programação e desenvolvimento web.</p>
-            <a href="arquivos/curriculo.docx"><p>BAIXAR CURRICULO</p> <img src="imagens/scrolldon.png" alt="icon"></a>
-        </article>
-        <a name="habilidades"></a>
-        <article class="habilidades">
-            <h1>HABILIDADES</h1>
-            <div class="container-hab">
-                <div class="container-card" id="hb1">
-                    <div class="header-card">
-                        <img src="imagens/info.png" alt="info-icon">
-                    </div>
-                    <div class="section-card">
-                        <h1>INFOMÁRTICA</h1>
-                        <p>AVANÇADO</p>
-                    </div>
-                </div>
-                <div class="container-card" id="hb2">
-                    <div class="header-card">
-                        <img src="imagens/css-3.png" alt="css-icon">
-                    </div>
-                    <div class="section-card">
-                        <h1>CSS</h1>
-                        <p>INTERMÉDIARIO</p>
-                    </div>
-                </div>
-                <div class="container-card" id="hb3">
-                    <div class="header-card">
-                        <img src="imagens/html.png" alt="html-icon">
-                    </div>
-                    <div class="section-card">
-                        <h1>HTML5</h1>
-                        <p>INTERMÉDIARIO</p>
-                    </div>
-                </div>
-                <div class="container-card" id="hb4">
-                    <div class="header-card">
-                        <img src="imagens/js.png" alt="js">
-                    </div>
-                    <div class="section-card">
-                        <h1>JAVASCRIPT</h1>
-                        <p>BÁSICO</p>
-                    </div>
-                </div>
-                <div class="container-card" id="hb5">
-                    <div class="header-card">
-                        <img src="imagens/eng.png" alt="ingles">
-                    </div>
-                    <div class="section-card">
-                        <h1>inglês</h1>
-                        <p>básico</p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <a name="projetos"></a>
-        <article class="projetos">
-            <h1>PROJETOS</h1>
-            <div class="container-projeto">
-                <img src="imagens/projeto1.png" alt="imagem-projeto">
-                <div class="content-projeto">
-                    <h1>TechConect</h1>
-                    <p>
-                    Projeto criado para ser adicionado ao meu portifólio, onde utilizei minhas habilidades de HTML CSS e JAVASCRIPT para criar um site para um evento fictício.
-                    </p>
-                    <a href="https://davi-souza-dev.github.io/Projeto1/" target="_blank">ACESSAR</a>
-                </div>
-            </div>
-            <div class="container-projeto">
-                <img src="imagens/projeto2.png" alt="imagem-projeto">
-                <div class="content-projeto">
-                    <h1>DevByte Studios</h1>
-                    <p>
-                    Site feito para agência de marketing e design.
-                    </p>
-                    <a href="https://davi-souza-dev.github.io/Site-Empresa/index.html" target="_blank">ACESSAR</a>
-                </div>
-            </div>
-            <div class="container-projeto">
-                <img src="imagens/projeto3.png" alt="imagem-projeto">
-                <div class="content-projeto">
-                    <h1>FitLife</h1>
-                    <p>
-                    Site desenvolvido para um Aplicativo de treino - Feito para práticar.
-                    </p>
-                    <a href="https://davi-souza-dev.github.io/Projeto2" target="_blank">ACESSAR</a>
-                </div>
-            </div>
-        </article>
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+      </article>
     </section>
     <footer>
-        <a name="contato"></a>
-        <h1>Contato</h1>
-        <div>
-            <a href="https://api.whatsapp.com/send?phone=5511949335503" id="link1" target="_blank">
-                <img src="imagens/whatsapp.png" alt="link-imagem">
-            </a>
-            <a href="https://github.com/Davi-Souza-Dev" id="link2" target="_blank">
-                <img src="imagens/github.png" alt="link-imagem">
-            </a>
-            <a href="https://www.instagram.com/davi.dev97/" id="link3" target="_blank">
-                <img src="imagens/instagram.png" alt="link-imagem">
-            </a>
-        </div>
+      <h1>Contato</h1>
+      <div class="container-link">
+        <a href="https://github.com/Davi-Souza-Dev" target="_blank">
+          <img src="imagens/GitHub.png" alt="inco-logo" />
+        </a>
+        <a href="mailto:daviekalebe2200@gmail.com" target="_blank">
+          <img src="imagens/gmail.png" alt="inco-logo" />
+        </a>
+        <!-- <a href="https://github.com/Davi-Souza-Dev" target="_blank">
+                <img src="imagens/LinkedIn.png" alt="inco-logo">
+            </a> -->
+        <a href="https://www.instagram.com/davi.dev97/" target="_blank">
+          <img src="imagens/Instagram.png" alt="inco-logo" />
+        </a>
+      </div>
     </footer>
-    <a href="#topo" class="btn-topo"></a>
-</body>
+  </body>
 </html>
