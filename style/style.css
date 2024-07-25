@@ -52,7 +52,7 @@ article {
   padding: 50px 0px;
 }
 
-article > h1 {
+article h1, footer h1 {
   margin-left: 20px;
   font-family: var(--fontPrinciapal);
   text-align: center;
@@ -112,7 +112,7 @@ article.sobre > .divFoto {
 .divFoto > .imgFundo {
   width: 250px;
   height: 250px;
-  border: 5px solid black;
+  border: 5px solid var(--cor4);
   position: absolute;
   top: 10px;
   left: 10px;
@@ -204,6 +204,10 @@ article.sobre > p {
   flex-grow: 2;
 }
 
+.cardProjeto:hover{
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
 .cardProjeto .cardHeader {
   width: 100%;
   height: 150px;
