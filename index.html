@@ -3,152 +3,424 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/style.css" />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <title>Home</title>
   </head>
   <body>
     <header></header>
     <section>
-      <article class="topo at1">
-        <!-- <div class="foto">
-            <img src="imagens/foto-perfil.jpg" alt="foto">
-        </div> -->
-        <h1>Davi <strong>de Souza</strong></h1>
-        <h2>FRONT-END DEVELOPER</h2>
+      <article class="topo">
+        <h1 class="nome">Davi Souza</h1>
+        <h1 class="frase">
+          <a
+            href=""
+            class="typewrite"
+            data-period="2000"
+            data-type='[ "Desenvolvedor...", "Front-End...","garoto de programa..."]'
+          >
+            <span class="wrap"></span>
+          </a>
+        </h1>
       </article>
-      <article class="habilidades at2">
-        <h2>Minhas</h2>
-        <h1><strong>Habilidades</strong></h1>
-        <div class="container-cards">
-          <div class="card">
-            <div class="bg">
-              <img src="imagens/info.png" alt="icon" />
-              <h1>Informática</h1>
-              <p>
-                Possuo habilidades com computadores tanto na parte de hambiente
-                quanto na administração de softwares e programas como o
-                <strong>Pacote Office</strong>.
-              </p>
-            </div>
-            <div class="blob"></div>
+      <article class="sobre">
+        <div class="divFoto">
+          <img src="imagens/foto-perfil.png" alt="foto-perfil" />
+          <div class="imgFundo"></div>
+        </div>
+        <h1>Sobre mim</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+          soluta corrupti enim officiis ut ducimus optio quis eum. Dolores
+          temporibus, pariatur porro ea amet fugiat quas perferendis nisi
+          nostrum obcaecati.
+        </p>
+        <a class="btnCv" href="cv/cv.dock">
+          Baixar Currículo
+          <div class="icon">
+            <svg
+              fill="#090aff"
+              height="200px"
+              width="200px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 392.533 392.533"
+              xml:space="preserve"
+              stroke="#090aff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <path
+                      d="M292.396,324.849H99.879c-6.012,0-10.925,4.848-10.925,10.925c0,6.012,4.849,10.925,10.925,10.925h192.582 c6.012,0,10.925-4.849,10.925-10.925C303.321,329.697,298.473,324.849,292.396,324.849z"
+                    ></path>
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M292.396,277.01H99.879c-6.012,0-10.925,4.848-10.925,10.925c0,6.012,4.849,10.925,10.925,10.925h192.582 c6.012,0,10.925-4.849,10.925-10.925C303.321,281.859,298.473,277.01,292.396,277.01z"
+                    ></path>
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M196.137,45.834c-25.859,0-46.998,21.075-46.998,46.998c0,25.859,21.139,46.933,46.998,46.933 s46.998-21.075,46.998-46.998S221.996,45.834,196.137,45.834z M196.137,117.851c-13.77,0-25.083-11.313-25.083-25.083 c0-13.77,11.248-25.083,25.083-25.083s25.083,11.313,25.083,25.083C221.22,106.537,209.907,117.851,196.137,117.851z"
+                    ></path>
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M258.521,163.362c-39.887-15.515-84.752-15.515-124.638,0c-13.059,5.107-21.786,18.101-21.786,32.388v44.347 c-0.065,6.012,4.849,10.925,10.861,10.925h146.424c6.012,0,10.925-4.848,10.925-10.925V195.75 C280.307,181.463,271.58,168.469,258.521,163.362z M258.521,229.236H133.883v-33.422c0-5.301,3.168-10.214,7.887-12.024 c34.844-13.511,74.02-13.511,108.865,0c4.719,1.875,7.887,6.659,7.887,12.024V229.236z"
+                    ></path>
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M313.083,0H131.491c-8.404,0-16.291,3.232-22.238,9.18L57.018,61.414c-5.947,5.948-9.18,13.834-9.18,22.238v277.333 c0,17.39,14.158,31.547,31.547,31.547h233.762c17.39,0,31.547-14.158,31.547-31.547V31.547C344.501,14.158,330.343,0,313.083,0z M112.032,37.236v27.022H85.01L112.032,37.236z M322.715,116.816h-40.598c-6.012,0-10.925,4.849-10.925,10.925 c0,6.012,4.848,10.925,10.925,10.925h40.598v19.394h-14.869c-6.012,0-10.925,4.848-10.925,10.925 c0,6.012,4.849,10.925,10.925,10.925h14.869v181.139c0,5.366-4.331,9.697-9.632,9.697H79.192c-5.301,0-9.632-4.331-9.632-9.632 V86.044h53.398c6.012,0,10.925-4.848,10.925-10.925V21.721h179.2c5.301,0,9.632,4.331,9.632,9.632V116.816z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
           </div>
-          <div class="card">
-            <div class="bg">
-              <img src="imagens/html.png" alt="icon" />
-              <h1>Desenvolvimento Web</h1>
-              <p>
-                Com tecnologias de <strong>HTML</strong>, <strong>CSS</strong> e
-                <strong>Javascript</strong>, além de serviços e sites para
-                agilizar o processo, consigo desenvolver aplicações Web, como
-                <strong>Sites</strong> <strong>intitucionais</strong> e
-                <strong>Landing</strong> <strong>Pages</strong>.
-              </p>
-            </div>
-            <div class="blob"></div>
+        </a>
+      </article>
+      <article class="projetos">
+        <h1>Projetos</h1>
+        <div class="cardProjeto">
+          <div class="cardHeader">
+            <img src="#" alt="foto-projeto" />
           </div>
-          <div class="card">
-            <div class="bg">
-              <img src="imagens/ingles.png" alt="icon" />
-              <h1>Inglês</h1>
-              <p>
-                C<strong>onsigo compreender muito bem</strong> mas possuo uma ligeira dificuldade
-                para falar em inglês, por isso tenho mais <strong>
-                    habilidade com
-                    entendimento em inglês
-                </strong>.
-              </p>
+          <div class="cardContent">
+            <div class="cardInfo">
+              <h1>Nome</h1>
             </div>
-            <div class="blob"></div>
+            <div class="cardTags">
+              <div class="tag js">
+                <svg
+                  viewBox="0 0 20 20"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>javascript [#155]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Dribbble-Light-Preview"
+                        transform="translate(-420.000000, -7479.000000)"
+                        fill="#000000"
+                      >
+                        <g
+                          id="icons"
+                          transform="translate(56.000000, 160.000000)"
+                        >
+                          <path
+                            d="M379.328,7337.432 C377.583,7337.432 376.455,7336.6 375.905,7335.512 L375.905,7335.512 L377.435,7334.626 C377.838,7335.284 378.361,7335.767 379.288,7335.767 C380.066,7335.767 380.563,7335.378 380.563,7334.841 C380.563,7334.033 379.485,7333.717 378.724,7333.391 C377.368,7332.814 376.468,7332.089 376.468,7330.558 C376.468,7329.149 377.542,7328.075 379.221,7328.075 C380.415,7328.075 381.275,7328.491 381.892,7329.578 L380.429,7330.518 C380.107,7329.941 379.758,7329.713 379.221,7329.713 C378.67,7329.713 378.321,7330.062 378.321,7330.518 C378.321,7331.082 378.67,7331.31 379.476,7331.659 C381.165,7332.383 382.443,7332.952 382.443,7334.814 C382.443,7336.506 381.114,7337.432 379.328,7337.432 L379.328,7337.432 Z M375,7334.599 C375,7336.546 373.801,7337.575 372.136,7337.575 C370.632,7337.575 369.731,7337 369.288,7336 L369.273,7336 L369.266,7336 L369.262,7336 L370.791,7334.931 C371.086,7335.454 371.352,7335.825 371.996,7335.825 C372.614,7335.825 373,7335.512 373,7334.573 L373,7328 L375,7328 L375,7334.599 Z M364,7339 L384,7339 L384,7319 L364,7319 L364,7339 Z"
+                            id="javascript-[#155]"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="tag html">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>file_type_html</title>
+                    <polygon
+                      points="5.902 27.201 3.655 2 28.345 2 26.095 27.197 15.985 30 5.902 27.201"
+                      style="fill: #e44f26"
+                    ></polygon>
+                    <polygon
+                      points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858"
+                      style="fill: #f1662a"
+                    ></polygon>
+                    <polygon
+                      points="16 13.407 11.91 13.407 11.628 10.242 16 10.242 16 7.151 15.989 7.151 8.25 7.151 8.324 7.981 9.083 16.498 16 16.498 16 13.407"
+                      style="fill: #ebebeb"
+                    ></polygon>
+                    <polygon
+                      points="16 21.434 15.986 21.438 12.544 20.509 12.324 18.044 10.651 18.044 9.221 18.044 9.654 22.896 15.986 24.654 16 24.65 16 21.434"
+                      style="fill: #ebebeb"
+                    ></polygon>
+                    <polygon
+                      points="15.989 13.407 15.989 16.498 19.795 16.498 19.437 20.507 15.989 21.437 15.989 24.653 22.326 22.896 22.372 22.374 23.098 14.237 23.174 13.407 22.341 13.407 15.989 13.407"
+                      style="fill: #fff"
+                    ></polygon>
+                    <polygon
+                      points="15.989 7.151 15.989 9.071 15.989 10.235 15.989 10.242 23.445 10.242 23.445 10.242 23.455 10.242 23.517 9.548 23.658 7.981 23.732 7.151 15.989 7.151"
+                      style="fill: #fff"
+                    ></polygon>
+                  </g>
+                </svg>
+              </div>
+              <div class="tag css">
+                <svg
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M6 28L4 3H28L26 28L16 31L6 28Z"
+                      fill="#1172B8"
+                    ></path>
+                    <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"></path>
+                    <path
+                      d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z"
+                      fill="white"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="cardBtn">
+              <a href="#">Ver Projeto</a>
+            </div>
           </div>
         </div>
-      </article>
-      <article class="carrosel">
-        <h2>meus</h2>
-        <h1><strong>Projetos</strong></h1>
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a
-                href="https://davi-souza-dev.github.io/Projeto2/"
-                target="_blank"
-              >
-                <img src="imagens/projeto-img-1.png" alt="foto-projeto" />
-              </a>
+        <div class="cardProjeto">
+          <div class="cardHeader">
+            <img src="#" alt="foto-projeto" />
+          </div>
+          <div class="cardContent">
+            <div class="cardInfo">
+              <h1>Nome</h1>
             </div>
-
-            <div class="swiper-slide">
-              <a
-                href="https://davi-souza-dev.github.io/Projeto1/"
-                target="_blank"
-              >
-                <img src="imagens/projeto-img-2.png" alt="foto-projeto" />
-              </a>
+            <div class="cardTags">
+              <div class="tag php">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <defs>
+                      <radialGradient
+                        id="a"
+                        cx="-16.114"
+                        cy="20.532"
+                        r="18.384"
+                        gradientTransform="translate(26.52 -9.307)"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stop-color="#ffffff"></stop>
+                        <stop offset="0.5" stop-color="#4c6b96"></stop>
+                        <stop offset="1" stop-color="#231f20"></stop>
+                      </radialGradient>
+                    </defs>
+                    <title>file_type_php</title>
+                    <ellipse
+                      cx="16"
+                      cy="16"
+                      rx="14"
+                      ry="7.365"
+                      style="fill: url(#a)"
+                    ></ellipse>
+                    <ellipse
+                      cx="16"
+                      cy="16"
+                      rx="13.453"
+                      ry="6.818"
+                      style="fill: #6280b6"
+                    ></ellipse>
+                    <path
+                      d="M18.725,18.2l.667-3.434a1.752,1.752,0,0,0-.372-1.719,2.929,2.929,0,0,0-2-.525H15.867l.331-1.7a.219.219,0,0,0-.215-.26h-1.6a.219.219,0,0,0-.215.177l-.709,3.646a2.051,2.051,0,0,0-.477-1.054,2.783,2.783,0,0,0-2.2-.807H7.7a.219.219,0,0,0-.215.177l-1.434,7.38a.219.219,0,0,0,.215.26H7.869a.219.219,0,0,0,.215-.177l.347-1.785h1.2a5.167,5.167,0,0,0,1.568-.2,3.068,3.068,0,0,0,1.15-.689,3.538,3.538,0,0,0,.68-.844l-.287,1.475a.219.219,0,0,0,.215.26h1.6a.219.219,0,0,0,.215-.177l.787-4.051h1.094c.466,0,.6.093.64.133s.1.165.025.569l-.635,3.265a.219.219,0,0,0,.215.26h1.62A.219.219,0,0,0,18.725,18.2ZM11.33,15.366a1.749,1.749,0,0,1-.561,1.092,2.171,2.171,0,0,1-1.315.321H8.742l.515-2.651h.921c.677,0,.949.145,1.059.266A1.181,1.181,0,0,1,11.33,15.366Z"
+                      style="fill: #fff"
+                    ></path>
+                    <path
+                      d="M25.546,13.332a2.783,2.783,0,0,0-2.2-.807H20.255a.219.219,0,0,0-.215.177l-1.434,7.38a.219.219,0,0,0,.215.26h1.608a.219.219,0,0,0,.215-.177l.347-1.785h1.2a5.167,5.167,0,0,0,1.568-.2,3.068,3.068,0,0,0,1.15-.689,3.425,3.425,0,0,0,1.076-1.927A2.512,2.512,0,0,0,25.546,13.332Zm-1.667,2.034a1.749,1.749,0,0,1-.561,1.092A2.171,2.171,0,0,1,22,16.778H21.29l.515-2.651h.921c.677,0,.949.145,1.059.266A1.181,1.181,0,0,1,23.879,15.366Z"
+                      style="fill: #fff"
+                    ></path>
+                    <path
+                      d="M10.178,13.908a1.645,1.645,0,0,1,1.221.338,1.34,1.34,0,0,1,.145,1.161,1.945,1.945,0,0,1-.642,1.223A2.361,2.361,0,0,1,9.454,17H8.476l.6-3.089ZM6.261,20.124H7.869l.381-1.962H9.627a4.931,4.931,0,0,0,1.5-.191,2.84,2.84,0,0,0,1.07-.642,3.207,3.207,0,0,0,1.01-1.808,2.3,2.3,0,0,0-.385-2.044,2.568,2.568,0,0,0-2.035-.732H7.7Z"
+                      style="fill: #000004"
+                    ></path>
+                    <path
+                      d="M14.387,10.782h1.6L15.6,12.744h1.421a2.767,2.767,0,0,1,1.85.468,1.548,1.548,0,0,1,.305,1.516l-.667,3.434H16.89l.635-3.265a.886.886,0,0,0-.08-.76,1.121,1.121,0,0,0-.8-.2H15.37l-.822,4.228h-1.6Z"
+                      style="fill: #000004"
+                    ></path>
+                    <path
+                      d="M22.727,13.908a1.645,1.645,0,0,1,1.221.338,1.34,1.34,0,0,1,.145,1.161,1.945,1.945,0,0,1-.642,1.223A2.361,2.361,0,0,1,22,17h-.978l.6-3.089ZM18.81,20.124h1.608l.381-1.962h1.377a4.931,4.931,0,0,0,1.5-.191,2.84,2.84,0,0,0,1.07-.642,3.207,3.207,0,0,0,1.01-1.808,2.3,2.3,0,0,0-.385-2.044,2.568,2.568,0,0,0-2.035-.732H20.244Z"
+                      style="fill: #000004"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="tag html">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>file_type_html</title>
+                    <polygon
+                      points="5.902 27.201 3.655 2 28.345 2 26.095 27.197 15.985 30 5.902 27.201"
+                      style="fill: #e44f26"
+                    ></polygon>
+                    <polygon
+                      points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858"
+                      style="fill: #f1662a"
+                    ></polygon>
+                    <polygon
+                      points="16 13.407 11.91 13.407 11.628 10.242 16 10.242 16 7.151 15.989 7.151 8.25 7.151 8.324 7.981 9.083 16.498 16 16.498 16 13.407"
+                      style="fill: #ebebeb"
+                    ></polygon>
+                    <polygon
+                      points="16 21.434 15.986 21.438 12.544 20.509 12.324 18.044 10.651 18.044 9.221 18.044 9.654 22.896 15.986 24.654 16 24.65 16 21.434"
+                      style="fill: #ebebeb"
+                    ></polygon>
+                    <polygon
+                      points="15.989 13.407 15.989 16.498 19.795 16.498 19.437 20.507 15.989 21.437 15.989 24.653 22.326 22.896 22.372 22.374 23.098 14.237 23.174 13.407 22.341 13.407 15.989 13.407"
+                      style="fill: #fff"
+                    ></polygon>
+                    <polygon
+                      points="15.989 7.151 15.989 9.071 15.989 10.235 15.989 10.242 23.445 10.242 23.445 10.242 23.455 10.242 23.517 9.548 23.658 7.981 23.732 7.151 15.989 7.151"
+                      style="fill: #fff"
+                    ></polygon>
+                  </g>
+                </svg>
+              </div>
+              <div class="tag css">
+                <svg
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M6 28L4 3H28L26 28L16 31L6 28Z"
+                      fill="#1172B8"
+                    ></path>
+                    <path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"></path>
+                    <path
+                      d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z"
+                      fill="white"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <a
-                href="https://davi-souza-dev.github.io/Projeto3/"
-                target="_blank"
-              >
-                <img src="imagens/projeto-img-3.png" alt="foto-projeto" />
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a
-                href="https://davi-souza-dev.github.io/devbeytestudios/"
-                target="_blank"
-              >
-                <img src="imagens/projeto-img-4.png" alt="foto-projeto" />
-              </a>
+            <div class="cardBtn">
+              <a href="#">Ver Projeto</a>
             </div>
           </div>
         </div>
-
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-        <!-- Initialize Swiper -->
-        <script>
-          var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-              delay: 2500,
-              disableOnInteraction: false,
-            },
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-          });
-        </script>
       </article>
     </section>
     <footer>
-      <h1>Contato</h1>
-      <div class="container-link">
-        <a href="https://github.com/Davi-Souza-Dev" target="_blank">
-          <img src="imagens/GitHub.png" alt="inco-logo" />
-        </a>
-        <a href="mailto:daviekalebe2200@gmail.com" target="_blank">
-          <img src="imagens/gmail.png" alt="inco-logo" />
-        </a>
-        <!-- <a href="https://github.com/Davi-Souza-Dev" target="_blank">
-                <img src="imagens/LinkedIn.png" alt="inco-logo">
-            </a> -->
-        <a href="https://www.instagram.com/davi.dev97/" target="_blank">
-          <img src="imagens/Instagram.png" alt="inco-logo" />
-        </a>
+      <form action="#" method="post">
+        <h1>Entre em contato</h1>
+        <div class="brutalist-container">
+          <input
+            placeholder="Email..."
+            class="brutalist-input smooth-type"
+            type="email"
+          />
+        </div>  
+        <div class="brutalist-container">
+          <textarea
+            placeholder="Menssagem..."
+            class="brutalist-input smooth-type"
+            type="textarea"
+          ></textarea>
+        </div>            
+        <div class="cardBtn" >
+          <button type="submit">Enviar</button>
+        </div>  
+      </form>
+      <div class="redes">
+        <ul class="wrapper">
+          <a href="#">
+            <li class="icon instagram">
+              <!-- <span class="tooltip">Instagram</span> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.2em"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                ></path>
+              </svg>
+            </li>
+          </a>
+          <a href="">
+            <li class="icon linkedin">
+              <!-- <span class="tooltip">Linkedin</span> -->
+              <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M17.303,14.365c0.012-0.015,0.023-0.031,0.031-0.048v0.048H17.303z M32,0v32H0V0H32L32,0z M9.925,12.285H5.153v14.354 h4.772V12.285z M10.237,7.847c-0.03-1.41-1.035-2.482-2.668-2.482c-1.631,0-2.698,1.072-2.698,2.482 c0,1.375,1.035,2.479,2.636,2.479h0.031C9.202,10.326,10.237,9.222,10.237,7.847z M27.129,18.408c0-4.408-2.355-6.459-5.494-6.459 c-2.531,0-3.664,1.391-4.301,2.368v-2.032h-4.77c0.061,1.346,0,14.354,0,14.354h4.77v-8.016c0-0.434,0.031-0.855,0.157-1.164 c0.346-0.854,1.132-1.746,2.448-1.746c1.729,0,2.418,1.314,2.418,3.246v7.68h4.771L27.129,18.408L27.129,18.408z"></path> </g> </g></svg>
+            </li>
+          </a>
+        </ul>
       </div>
     </footer>
+    <script src="script/script.js"></script>
   </body>
 </html>
